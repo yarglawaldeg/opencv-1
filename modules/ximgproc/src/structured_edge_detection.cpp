@@ -802,9 +802,9 @@ protected:
 
                     int currentNode = pIndex[j*nTreesEval + k];
 
-                    const int nBnds = (__rf.edgeBoundaries.size() - 1) / (nTreesNodes * nTrees)
+                    const int nBnds = (__rf.edgeBoundaries.size() - 1) / (nTreesNodes * nTrees);
                     
-                    int start = __rf.edgeBoundaries[currentNode * nBnds]
+                    int start = __rf.edgeBoundaries[currentNode * nBnds];
                     int finish = __rf.edgeBoundaries[currentNode * nBnds + 1];
 
                     if (start == finish)
