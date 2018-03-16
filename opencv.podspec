@@ -11,10 +11,10 @@ OpenCV: open source computer vision library
     Dev zone: http://code.opencv.org
     DESC
 
-    s.homepage         = 'https://github.com/yarglawaldeg/opencv'
+    s.homepage         = 'https://github.com/booqee/opencv'
     s.license          = { :type => '3-clause BSD', :file => 'LICENSE' }
     s.authors          = 'opencv.org'
-    s.source           = { :git => 'https://github.com/yarglawaldeg/opencv.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/booqee/opencv.git', :tag => s.version.to_s }
 
     s.ios.deployment_target = "8.0"
     s.source_files = "install/include/**/*{.h,.hpp}"
@@ -38,6 +38,6 @@ OpenCV: open source computer vision library
     ]
 
     s.prepare_command = <<-CMD
-        python opencv/platforms/ios/build_framework.py ios
+        python platforms/ios/build_framework.py ios
     CMD
 end
