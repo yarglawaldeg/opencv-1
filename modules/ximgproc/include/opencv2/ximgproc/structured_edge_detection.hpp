@@ -127,7 +127,13 @@ public:
     @param isParallel enables/disables parallel computing.
      */
     CV_WRAP virtual void edgesNms(cv::InputArray edge_image, cv::InputArray orientation_image, cv::OutputArray _dst, int r = 2, int s = 0, float m = 1, bool isParallel = true) const = 0;
+    
+    RandomForest getRf();
+    
+    void setRf(RandomForest rf);
+    
 };
+
 
 /*!
 * The only constructor
@@ -139,6 +145,9 @@ public:
 */
 CV_EXPORTS_W Ptr<StructuredEdgeDetection> createStructuredEdgeDetection(const String &model,
     Ptr<const RFFeatureGetter> howToGetFeatures = Ptr<RFFeatureGetter>());
+    
+CV_EXPORTS_W Ptr<StructuredEdgeDetection> createStructuredEdgeDetection(Ptr<const RFFeatureGetter> howToGetFeatures = Ptr<RFFeatureGetter>());
+    
 
 //! @}
 
